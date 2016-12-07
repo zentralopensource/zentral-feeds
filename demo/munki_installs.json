@@ -1,6 +1,6 @@
 {
   "name": "Munki installs demo feed",
-  "id": "io.zentral.demo.munki_installs",
+  "id": "io.zentral.demo.munkiinstalls",
   "probes": {
     "firefox-installs": {
       "model": "MunkiInstallProbe",
