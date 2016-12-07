@@ -1,0 +1,33 @@
+{
+  "name": "Santa demo feed",
+  "id": "io.zentral.demo.santa",
+  "probes": {
+    "block-yes": {
+      "model": "SantaProbe",
+      "name": "Block yes",
+      "body": {
+        "rules": [
+          {
+            "policy": "BLACKLIST",
+            "rule_type": "BINARY",
+            "sha256": "ff98fa0c0a1095fedcbe4d388a9760e71399a5c3c017a847ffa545663b57929a",
+            "custom_msg": "Blocked by Zentral santa probe"
+          }
+        ]
+      }
+    },
+    "allow-yes": {
+      "model": "SantaProbe",
+      "name": "Allow yes",
+      "body": {
+        "rules": [
+          {
+            "policy": "WHITELIST",
+            "rule_type": "BINARY",
+            "sha256": "ff98fa0c0a1095fedcbe4d388a9760e71399a5c3c017a847ffa545663b57929a"
+          }
+        ]
+      }
+    }
+  }
+}

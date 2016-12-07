@@ -1,0 +1,21 @@
+{
+  "name": "Events demo feed",
+  "id": "io.zentral.demo.events",
+  "probes": {
+    "network-interface-updates": {
+      "model": "BaseProbe",
+      "name": "Network interface updates",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "inventory_network_interface_update"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
