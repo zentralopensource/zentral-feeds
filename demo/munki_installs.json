@@ -1,0 +1,14 @@
+{
+  "name": "Munki installs demo feed",
+  "id": "io.zentral.demo.munki_installs",
+  "probes": {
+    "firefox-installs": {
+      "model": "MunkiInstallProbe",
+      "name": "Firefox installs",
+      "body": {
+        "install_types": ["install"],
+        "installed_item_names": ["Firefox"]
+      }
+    }
+  }
+}
