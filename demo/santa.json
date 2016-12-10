@@ -34,7 +34,7 @@
     "block-transmission-cert": {
       "model": "SantaProbe",
       "name": "Block Transmission.app (certificate rule)",
-      "description": "Block Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\\n\\nAll the other applications signed with this certificate are also blocked.",
+      "description": "Block Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\n\nAll the other applications signed with this certificate are also blocked.",
       "body": {
         "rules": [
           {
@@ -49,7 +49,7 @@
     "allow-transmission-cert": {
       "model": "SantaProbe",
       "name": "Allow Transmission.app (certificate rule)",
-      "description": "Allow Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\\n\\nAll the other applications signed with this certificate are also allowed.",
+      "description": "Allow Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\n\nAll the other applications signed with this certificate are also allowed.",
       "body": {
         "rules": [
           {
