@@ -4,7 +4,8 @@
   "probes": {
     "block-yes": {
       "model": "SantaProbe",
-      "name": "Block yes",
+      "name": "Block /zsr/bin/yes (binary rule)",
+      "description": "Block the /usr/bin/yes binary on macOS 10.11 and 10.12 with a BINARY santa rule",
       "body": {
         "rules": [
           {
@@ -18,7 +19,8 @@
     },
     "allow-yes": {
       "model": "SantaProbe",
-      "name": "Allow yes",
+      "name": "Allow /usr/bin/yes (binary rule)",
+      "description": "Allow the /usr/bin/yes binary on macOS 10.11 and 10.12 with a BINARY santa rule",
       "body": {
         "rules": [
           {
@@ -31,7 +33,8 @@
     },
     "block-transmission-cert": {
       "model": "SantaProbe",
-      "name": "Block Digital Ignition LLC dev cert (Transmission.app)",
+      "name": "Block Transmission.app (certificate rule)",
+      "description": "Block Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\\n\\nAll the other applications signed with this certificate are also blocked.",
       "body": {
         "rules": [
           {
@@ -45,7 +48,8 @@
     },
     "allow-transmission-cert": {
       "model": "SantaProbe",
-      "name": "Allow Digital Ignition LLC dev cert (Transmission.app)",
+      "name": "Allow Transmission.app (certificate rule)",
+      "description": "Allow Transmission.app with a santa rule on the 'Digital Ignition LLC' developper certificate.\\n\\nAll the other applications signed with this certificate are also allowed.",
       "body": {
         "rules": [
           {
@@ -60,6 +64,7 @@
     "all-allowed-events": {
       "model": "BaseProbe",
       "name": "All 'ALLOW_*' santa events",
+      "description": "Find all the binary executions that santa allowed.",
       "body": {
         "filters": {
           "metadata": [
@@ -84,6 +89,7 @@
     "all-blocked-events": {
       "model": "BaseProbe",
       "name": "All 'BLOCK_*' santa events",
+      "description": "Find all the binary executions that santa blocked.",
       "body": {
         "filters": {
           "metadata": [
