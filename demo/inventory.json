@@ -4,13 +4,14 @@
   "probes": {
     "network-interface-updates": {
       "model": "BaseProbe",
-      "name": "Network interface updates",
+      "name": "New machine",
+      "description": "All the inventory machine added events",
       "body": {
         "filters": {
           "metadata": [
             {
               "event_types": [
-                "inventory_network_interface_update"
+                "inventory_machine_added"
               ]
             }
           ]
