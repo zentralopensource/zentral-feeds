@@ -28,6 +28,82 @@
           }
         ]
       }
+    },
+    "block-transmission-cert": {
+      "model": "SantaProbe",
+      "name": "Block Digital Ignition LLC dev cert (Transmission.app)",
+      "body": {
+        "rules": [
+          {
+            "policy": "BLACKLIST",
+            "rule_type": "CERTIFICATE",
+            "sha256": "aa490f3879ba8a1239f7eec2f574c73c085d8e5ec99fc6036f185609236f56ad",
+            "custom_msg": "Blocked by Zentral santa probe"
+          }
+        ]
+      }
+    },
+    "block-transmission-cert": {
+      "model": "SantaProbe",
+      "name": "Allow Digital Ignition LLC dev cert (Transmission.app)",
+      "body": {
+        "rules": [
+          {
+            "policy": "WHITELIST",
+            "rule_type": "CERTIFICATE",
+            "sha256": "aa490f3879ba8a1239f7eec2f574c73c085d8e5ec99fc6036f185609236f56ad",
+            "custom_msg": "Blocked by Zentral santa probe"
+          }
+        ]
+      }
+    },
+    "all-allowed-events": {
+      "model": "BaseProbe",
+      "name": "All 'ALLOW_*' santa events",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "santa_event"
+              ]
+            }
+          ],
+          "payload": [
+            {
+              "decision": [
+                "ALLOW_UNKNOWN",
+                "ALLOW_BINARY",
+                "ALLOW_CERTIFICATE"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "all-blocked-events": {
+      "model": "BaseProbe",
+      "name": "All 'BLOCK_*' santa events",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "santa_event"
+              ]
+            }
+          ],
+          "payload": [
+            {
+              "decision": [
+                "BLOCK_UNKNOWN",
+                "BLOCK_BINARY",
+                "BLOCK_CERTIFICATE"
+              ]
+            }
+          ]
+        }
+      }
     }
   }
 }
