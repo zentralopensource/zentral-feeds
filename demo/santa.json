@@ -1,5 +1,6 @@
 {
-  "name": "Santa demo feed",
+  "name": "Santa demo",
+  "description": "Demonstrate some of the santa functionalities and the integration with Zentral.",
   "id": "io.zentral.demo.santa",
   "probes": {
     "block-yes": {
