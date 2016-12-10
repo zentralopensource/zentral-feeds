@@ -1,0 +1,48 @@
+{
+  "name": "Inventory demo",
+  "id": "io.zentral.demo.inventory",
+  "probes": {
+    "network-interface-updates": {
+      "model": "BaseProbe",
+      "name": "Network interface updates",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "inventory_network_interface_update"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "firefox-installs": {
+      "model": "BaseProbe",
+      "name": "Firefox installs",
+      "description": "All firefox installs via the inventory osx app instance update events",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "inventory_osx_app_instance_update"
+              ]
+            }
+          ],
+          "payload": [
+            {
+              "action": [
+                "added"
+              ],
+              "app.bundle_name": [
+                "Firefox",
+                "Firefox.app"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
