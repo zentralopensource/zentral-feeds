@@ -43,7 +43,7 @@
         ]
       }
     },
-    "block-transmission-cert": {
+    "allow-transmission-cert": {
       "model": "SantaProbe",
       "name": "Allow Digital Ignition LLC dev cert (Transmission.app)",
       "body": {
