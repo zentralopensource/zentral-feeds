@@ -1,0 +1,52 @@
+{
+  "name": "Munki demo",
+  "id": "io.zentral.demo.munki",
+  "probes": {
+    "firefox-installs": {
+      "model": "MunkiInstallProbe",
+      "name": "Firefox installs",
+      "description": "All firefox installs reported by Munki",
+      "body": {
+        "install_types": [
+          "install"
+        ],
+        "installed_item_names": [
+          "Firefox"
+        ]
+      }
+    },
+    "unattended-installs": {
+      "model": "MunkiInstallProbe",
+      "name": "Unattended installs",
+      "description": "All unattended installs reported by Munki",
+      "body": {
+        "install_types": [
+          "install"
+        ],
+        "unattended_installs": true
+      }
+    },
+    "munki-runs": {
+      "model": "BaseProbe",
+      "name": "managedsoftwareupdate auto runs",
+      "description": "All managedsoftwareupdate runs in automatic mode",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "munki_event"
+              ]
+            }
+          ],
+          "payload": [
+            {
+              "type": "start",
+              "run_type": "auto"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
