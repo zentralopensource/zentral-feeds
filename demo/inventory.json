@@ -4,7 +4,7 @@
   "probes": {
     "network-interface-updates": {
       "model": "BaseProbe",
-      "name": "New machine",
+      "name": "New machines",
       "description": "All the inventory machine added events",
       "body": {
         "filters": {
