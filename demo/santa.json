@@ -4,7 +4,7 @@
   "probes": {
     "block-yes": {
       "model": "SantaProbe",
-      "name": "Block /zsr/bin/yes (binary rule)",
+      "name": "Block /usr/bin/yes (binary rule)",
       "description": "Block the /usr/bin/yes binary on macOS 10.11 and 10.12 with a BINARY santa rule",
       "body": {
         "rules": [
