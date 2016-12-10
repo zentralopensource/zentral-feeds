@@ -41,8 +41,12 @@
           ],
           "payload": [
             {
-              "type": "start",
-              "run_type": "auto"
+              "type": [
+                "start"
+              ],
+              "run_type": [
+                "auto"
+              ]
             }
           ]
         }
