@@ -250,7 +250,7 @@
       "body": {
         "queries": [
           {
-            "interval": 3600,
+            "interval": 60,
             "query": "select * FROM block_devices AS bd JOIN mounts AS m WHERE m.device = bd.name AND bd.type = 'USB';",
             "removed": false
           }
