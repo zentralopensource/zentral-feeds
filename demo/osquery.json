@@ -242,6 +242,20 @@
           }
         ]
       }
+    },
+    "usb-block-devices": {
+      "model": "OsqueryProbe",
+      "name": "USB storage devices",
+      "description": "Log the connections of USB block_devices.",
+      "body": {
+        "queries": [
+          {
+            "interval": 3600,
+            "query": "select * FROM block_devices AS bd JOIN mounts AS m WHERE m.device = bd.name AND bd.type = 'USB';",
+            "removed": false
+          }
+        ]
+      }
     }
   }
 }
