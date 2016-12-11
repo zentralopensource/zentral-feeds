@@ -91,7 +91,7 @@
                 "max_value": 90
               }
             ],
-            "rel_path": "com.agilebits.onepassword4.plist",
+            "rel_path": "%com.agilebits.onepassword4%",
             "type": "USERS"
           }
         ]
