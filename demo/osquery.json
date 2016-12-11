@@ -47,6 +47,55 @@
           ]
         }
       }
+    },
+    "1password-security-settings": {
+      "model": "OsqueryComplianceProbe",
+      "name": "1Password security settings",
+      "description": "Demo for application compliance check. Monitor 1Password settings for lock and pasteboard settings.",
+      "body": {
+        "preference_files": [
+          {
+            "description": "Agilebits recommended defaults",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "ClearPasteboardAfterTimeout",
+                "value": "1"
+              },
+              {
+                "key": "ConcealPasswords",
+                "value": "1"
+              },
+              {
+                "key": "LockOnIdle",
+                "value": "1"
+              },
+              {
+                "key": "LockOnScreenSaver",
+                "value": "1"
+              },
+              {
+                "key": "LockOnSleep",
+                "value": "1"
+              },
+              {
+                "key": "LockOnUserSwitch",
+                "value": "1"
+              },
+              {
+                "key": "LockTimeout",
+                "max_value": 5
+              },
+              {
+                "key": "PasteboardClearTimeout",
+                "max_value": 90
+              }
+            ],
+            "rel_path": "com.agilebits.onepassword4.plist",
+            "type": "USERS"
+          }
+        ]
+      }
     }
   }
 }
