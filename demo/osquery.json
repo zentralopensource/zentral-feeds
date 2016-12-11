@@ -1,0 +1,52 @@
+{
+  "name": "Osquery demo",
+  "description": "Demonstrate some of the osquery functionalities and the integration with Zentral.",
+  "id": "io.zentral.demo.osquery",
+  "probes": {
+    "distributed-101": {
+      "model": "OsqueryDistributedQueryProbe",
+      "name": "Simple distributed query",
+      "description": "Gather some info from the enrolled osquery clients.",
+      "body": {
+        "distributed_query": "select * from osquery_info;"
+      }
+    },
+    "fim-101": {
+      "model": "OsqueryFIMProbe",
+      "name": "Monitor the .ssh folders",
+      "description": "File integrity monitoring of the .ssh folders with osquery.\nhttps://osquery.readthedocs.io/en/stable/deployment/file-integrity-monitoring/",
+      "body": {
+        "file_paths": [
+          {
+            "file_access": false,
+            "file_path": "/home/%/.ssh/"
+          },
+          {
+            "file_access": false,
+            "file_path": "/Users/%/.ssh/"
+          },
+          {
+            "file_access": false,
+            "file_path": "/root/.ssh/"
+          }
+        ]
+      }
+    },
+    "debug": {
+      "model": "BaseProbe",
+      "name": "Osqueryd clients logs",
+      "description": "The status logs posted by the osqueryd clients",
+      "body": {
+        "filters": {
+          "metadata": [
+            {
+              "event_types": [
+                "osquery_status"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
