@@ -96,6 +96,152 @@
           }
         ]
       }
+    },
+    "cis-security-benchmarks-for-macos": {
+      "body": {
+        "model": "OsqueryComplianceProbe",
+        "name": "CIS Security Benchmarks for macOS",
+        "description": "Check several recommendations from CIS security benchmarks for Apple security\r\n\r\nhttps://benchmarks.cisecurity.org/tools2/osx/CIS_Apple_OSX_10.12_Benchmark_v1.0.0.pdf",
+        "preference_files": [
+          {
+            "description": "CIS Guideline: 1.2 Enable auto update, 1.3 Enable app update installs, 1.4 Enable system and security installs",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "AutomaticCheckEnabled",
+                "value": "TRUE"
+              },
+              {
+                "key": "AutomaticDownload",
+                "value": "FALSE"
+              },
+              {
+                "key": "ConfigDataInstall",
+                "value": "TRUE"
+              },
+              {
+                "key": "CriticalUpdateInstall",
+                "value": "TRUE"
+              }
+            ],
+            "rel_path": "com.apple.SoftwareUpdate.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 1.3 Enable app update installs, 1.5 Enable macOS update installs",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "AutoUpdate",
+                "value": "FALSE"
+              },
+              {
+                "key": "AutoUpdateRestartRequired",
+                "value": "FALSE"
+              }
+            ],
+            "rel_path": "com.apple.commerce.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 2.1.1 Bluetooth off",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "ControllerPowerState",
+                "value": "0"
+              }
+            ],
+            "rel_path": "com.apple.Bluetooth.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 2.3.1 Screen saver inactivity timer, set acceptable range 90s - 20min",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "idleTime",
+                "max_value": 1200,
+                "min_value": 90
+              }
+            ],
+            "rel_path": "com.apple.screensaver.plist",
+            "type": "USERS"
+          },
+          {
+            "description": "CIS Guideline: 2.4.7 Disable Bluetooth sharing",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "PrefKeyServicesEnabled",
+                "value": "1"
+              }
+            ],
+            "rel_path": "ByHost/com.apple.Bluetooth%",
+            "type": "USERS"
+          },
+          {
+            "description": "CIS Guideline: 4.1 Disable Bonjour advertising service",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "NoMulticastAdvertisements",
+                "value": "YES"
+              }
+            ],
+            "rel_path": "com.apple.mDNSResponder.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 5.15 Disable Fast User Switching",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "MultipleSessionEnabled",
+                "value": "NO"
+              }
+            ],
+            "rel_path": ".GlobalPreferences.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 6.1.3 Disable Guest Account",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "GuestEnabled",
+                "value": "NO"
+              }
+            ],
+            "rel_path": "com.apple.loginwindow.plist",
+            "type": "GLOBAL"
+          },
+          {
+            "description": "CIS Guideline: 6.3 Disable Safari safe file opening",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "AutoOpenSafeDownloads",
+                "value": "NO"
+              }
+            ],
+            "rel_path": "com.apple.Safari.plist",
+            "type": "USERS"
+          },
+          {
+            "description": "CIS Guideline: 2.6.3 Enable Firewall",
+            "interval": 3600,
+            "keys": [
+              {
+                "key": "globalstate",
+                "value": "1"
+              }
+            ],
+            "rel_path": "com.apple.alf.plist",
+            "type": "GLOBAL"
+          }
+        ]
+      }
     }
   }
 }
