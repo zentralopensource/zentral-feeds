@@ -12,7 +12,13 @@
           {
             "policy": "BLACKLIST",
             "rule_type": "BINARY",
-            "sha256": "2aa4b9973b7ba07add447ee4da8b5337c3ee2c3a991911e80e7282e8a751fc32",
+            "sha256": "ff98fa0c0a1095fedcbe4d388a9760e71399a5c3c017a847ffa545663b57929a",
+            "custom_msg": "Blocked by Zentral santa probe"
+          },
+          {
+            "policy": "BLACKLIST",
+            "rule_type": "BINARY",
+            "sha256": "e8e3e5700e9e023d09aa85f0dbd7f2f53e83bcd6f7380edbf9666e7f470f0c50",
             "custom_msg": "Blocked by Zentral santa probe"
           }
         ]
@@ -27,7 +33,12 @@
           {
             "policy": "WHITELIST",
             "rule_type": "BINARY",
-            "sha256": "2aa4b9973b7ba07add447ee4da8b5337c3ee2c3a991911e80e7282e8a751fc32"
+            "sha256": "ff98fa0c0a1095fedcbe4d388a9760e71399a5c3c017a847ffa545663b57929a"
+          },
+          {
+            "policy": "WHITELIST",
+            "rule_type": "BINARY",
+            "sha256": "e8e3e5700e9e023d09aa85f0dbd7f2f53e83bcd6f7380edbf9666e7f470f0c50"
           }
         ]
       }
