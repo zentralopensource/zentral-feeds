@@ -48,101 +48,12 @@
         }
       }
     },
-    "1password-security-settings": {
-      "model": "OsqueryComplianceProbe",
-      "name": "1Password security settings",
-      "description": "Demo for application compliance check. Monitor 1Password settings for lock and pasteboard settings.",
-      "body": {
-        "preference_files": [
-          {
-            "description": "Agilebits recommended defaults",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "ClearPasteboardAfterTimeout",
-                "value": "1"
-              },
-              {
-                "key": "ConcealPasswords",
-                "value": "1"
-              },
-              {
-                "key": "LockOnIdle",
-                "value": "1"
-              },
-              {
-                "key": "LockOnScreenSaver",
-                "value": "1"
-              },
-              {
-                "key": "LockOnSleep",
-                "value": "1"
-              },
-              {
-                "key": "LockOnUserSwitch",
-                "value": "1"
-              },
-              {
-                "key": "LockTimeout",
-                "max_value": 5
-              },
-              {
-                "key": "PasteboardClearTimeout",
-                "max_value": 90
-              }
-            ],
-            "rel_path": "%com.agilebits.onepassword4%",
-            "type": "USERS"
-          }
-        ]
-      }
-    },
     "cis-security-benchmarks-for-macos": {
       "model": "OsqueryComplianceProbe",
       "name": "CIS Security Benchmarks for macOS",
       "description": "Check several recommendations from CIS security benchmarks for Apple security\r\n\r\nhttps://benchmarks.cisecurity.org/tools2/osx/CIS_Apple_OSX_10.12_Benchmark_v1.0.0.pdf",
       "body": {
         "preference_files": [
-          {
-            "description": "CIS Guideline: 1.2 Enable auto update, 1.3 Enable app update installs, 1.4 Enable system and security installs",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "AutomaticCheckEnabled",
-                "value": "TRUE"
-              },
-              {
-                "key": "AutomaticDownload",
-                "value": "FALSE"
-              },
-              {
-                "key": "ConfigDataInstall",
-                "value": "TRUE"
-              },
-              {
-                "key": "CriticalUpdateInstall",
-                "value": "TRUE"
-              }
-            ],
-            "rel_path": "com.apple.SoftwareUpdate.plist",
-            "type": "GLOBAL"
-          },
-          {
-            "description": "CIS Guideline: 1.3 Enable app update installs, 1.5 Enable macOS update installs",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "AutoUpdate",
-                "value": "FALSE"
-              },
-              {
-                "key": "AutoUpdateRestartRequired",
-                "value": "FALSE"
-              }
-            ],
-            "rel_path": "com.apple.commerce.plist",
-            "type": "GLOBAL"
-          },
           {
             "description": "CIS Guideline: 2.1.1 Bluetooth off",
             "interval": 3600,
@@ -153,55 +64,6 @@
               }
             ],
             "rel_path": "com.apple.Bluetooth.plist",
-            "type": "GLOBAL"
-          },
-          {
-            "description": "CIS Guideline: 2.3.1 Screen saver inactivity timer, set acceptable range 90s - 20min",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "idleTime",
-                "max_value": 1200,
-                "min_value": 90
-              }
-            ],
-            "rel_path": "com.apple.screensaver.plist",
-            "type": "USERS"
-          },
-          {
-            "description": "CIS Guideline: 2.4.7 Disable Bluetooth sharing",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "PrefKeyServicesEnabled",
-                "value": "1"
-              }
-            ],
-            "rel_path": "ByHost/com.apple.Bluetooth%",
-            "type": "USERS"
-          },
-          {
-            "description": "CIS Guideline: 4.1 Disable Bonjour advertising service",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "NoMulticastAdvertisements",
-                "value": "YES"
-              }
-            ],
-            "rel_path": "com.apple.mDNSResponder.plist",
-            "type": "GLOBAL"
-          },
-          {
-            "description": "CIS Guideline: 5.15 Disable Fast User Switching",
-            "interval": 3600,
-            "keys": [
-              {
-                "key": "MultipleSessionEnabled",
-                "value": "NO"
-              }
-            ],
-            "rel_path": ".GlobalPreferences.plist",
             "type": "GLOBAL"
           },
           {
