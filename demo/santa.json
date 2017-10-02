@@ -20,6 +20,12 @@
             "rule_type": "BINARY",
             "sha256": "e8e3e5700e9e023d09aa85f0dbd7f2f53e83bcd6f7380edbf9666e7f470f0c50",
             "custom_msg": "Blocked by Zentral santa probe"
+          },
+          {
+            "policy": "BLACKLIST",
+            "rule_type": "BINARY",
+            "sha256": "fb364786539cca469055404111867bcc4c1f7452f5ce225f13622daa2beb42e7",
+            "custom_msg": "Blocked by Zentral santa probe"
           }
         ]
       }
@@ -39,6 +45,11 @@
             "policy": "WHITELIST",
             "rule_type": "BINARY",
             "sha256": "e8e3e5700e9e023d09aa85f0dbd7f2f53e83bcd6f7380edbf9666e7f470f0c50"
+          },
+          {
+            "policy": "WHITELIST",
+            "rule_type": "BINARY",
+            "sha256": "fb364786539cca469055404111867bcc4c1f7452f5ce225f13622daa2beb42e7"
           }
         ]
       }
