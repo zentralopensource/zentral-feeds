@@ -40,14 +40,22 @@
             }
           ],
           "payload": [
-            {
-              "type": [
-                "start"
-              ],
-              "run_type": [
-                "auto"
-              ]
-            }
+            [
+              {
+                "values": [
+                  "start"
+                ],
+                "operator": "IN",
+                "attribute": "type"
+              },
+              {
+                "values": [
+                  "auto"
+                ],
+                "operator": "IN",
+                "attribute": "run_type"
+              }
+            ]
           ]
         }
       }
