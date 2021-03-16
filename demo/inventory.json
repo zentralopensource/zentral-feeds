@@ -32,15 +32,25 @@
             }
           ],
           "payload": [
-            {
-              "action": [
-                "added"
-              ],
-              "app.bundle_name": [
-                "Firefox",
-                "Firefox.app"
-              ]
-            }
+            [
+              {
+                "values": [
+                  "added"
+                ],
+                "operator": "IN",
+                "attribute": "action"
+              }
+            ],
+            [
+              {
+                "values": [
+                  "Firefox",
+                  "Firefox.app"
+                ],
+                "operator": "IN",
+                "attribute": "app.bundle_name"
+              }
+            ]
           ]
         }
       }
