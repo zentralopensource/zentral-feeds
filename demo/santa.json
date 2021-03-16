@@ -17,13 +17,17 @@
             }
           ],
           "payload": [
-            {
-              "decision": [
-                "ALLOW_UNKNOWN",
-                "ALLOW_BINARY",
-                "ALLOW_CERTIFICATE"
-              ]
-            }
+            [
+              {
+                "values": [
+                  "ALLOW_UNKNOWN",
+                  "ALLOW_BINARY",
+                  "ALLOW_CERTIFICATE"
+                ],
+                "operator": "IN",
+                "attribute": "decision"
+              }
+            ]
           ]
         }
       }
@@ -42,13 +46,17 @@
             }
           ],
           "payload": [
-            {
-              "decision": [
-                "BLOCK_UNKNOWN",
-                "BLOCK_BINARY",
-                "BLOCK_CERTIFICATE"
-              ]
-            }
+            [
+              {
+                "values": [
+                  "BLOCK_UNKNOWN",
+                  "BLOCK_BINARY",
+                  "BLOCK_CERTIFICATE"
+                ],
+                "operator": "IN",
+                "attribute": "decision"
+              }
+            ]
           ]
         }
       }
